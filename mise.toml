@@ -1,0 +1,127 @@
+# $schema: https://mise.jdx.dev/schema/mise.json
+
+[settings]
+npm.package_manager = "pnpm"
+quiet = true
+
+[tools]
+node = "24.13.1"
+"trivy" = "0.69.1"
+"typos" = "1.43.4"
+
+# ============================================================================
+# SETUP TASKS - Initialize environment and tools
+# ============================================================================
+
+[tasks."setup:pnpm"]
+description = "Install pnpm dependencies"
+hide = true
+run = ["corepack enable pnpm", "pnpm install"]
+
+[tasks.setup]
+description = "Install all dependencies"
+depends = ["setup:pnpm"]
+
+# ============================================================================
+# SCRAPING TASKS - Manage LinkedIn interaction
+# ============================================================================
+
+[tasks.auth]
+description = "Setup LinkedIn authentication"
+run = "node scripts/setup_auth.ts"
+
+[tasks.scrape]
+description = "Scrape a LinkedIn profile"
+usage = "arg <url> help='LinkedIn profile URL'"
+run = "node scripts/scrape_full_profile.ts {{usage.url}}"
+
+[tasks."scrape:batch"]
+description = "Scrape multiple uncategorized profiles"
+usage = "arg [limit] help='Number of profiles to scrape (default: 5)'"
+run = "node scripts/scrape_batch.ts {{usage.limit}}"
+
+[tasks.connections]
+description = "Scrape LinkedIn connections"
+run = "node scripts/scrape_full_connections.ts"
+
+# ============================================================================
+# LINT & CHECK/FIX TASKS - Verify and fix code quality and security
+# ============================================================================
+
+# --- oxlint (JS/TS) ---
+[tasks."check:oxlint"]
+description = "Check TS with oxlint"
+hide = true
+run = "pnpm exec oxlint . --deny-warnings"
+
+[tasks."fix:oxlint"]
+description = "Fix TS with oxlint"
+hide = true
+run = "pnpm exec oxlint . --fix"
+
+# --- oxfmt (JS/TS/JSON) ---
+[tasks."check:oxfmt"]
+description = "Check TS/JSON with oxfmt"
+hide = true
+run = "pnpm exec oxfmt --check ."
+
+[tasks."fix:oxfmt"]
+description = "Format TS/JSON with oxfmt"
+hide = true
+run = "pnpm exec oxfmt --write ."
+
+# --- markdownlint (Markdown) ---
+[tasks."check:markdownlint"]
+description = "Check Markdown files"
+hide = true
+run = "pnpm exec markdownlint-cli2"
+
+[tasks."fix:markdownlint"]
+description = "Fix Markdown files"
+hide = true
+run = "pnpm exec markdownlint-cli2 --fix"
+
+# --- typos ---
+[tasks."check:typos"]
+description = "Check for typos"
+hide = true
+run = "typos ."
+
+[tasks."fix:typos"]
+description = "Fix typos"
+hide = true
+run = "typos . -w"
+
+# --- trivy ---
+[tasks."check:trivy"]
+description = "Security scan with trivy"
+hide = true
+run = "trivy fs . --format table --ignore-unfixed --no-progress"
+
+[tasks."fix:trivy"]
+description = "Security scan with trivy (no auto-fix available)"
+hide = true
+run = [{ task = "check:trivy" }]
+
+# --- Global check/fix tasks ---
+[tasks.check]
+description = "Verify code quality"
+alias = "c"
+depends = [
+  "check:oxlint",
+  "check:oxfmt",
+  "check:markdownlint",
+  "check:typos",
+  "check:trivy",
+]
+
+[tasks.fix]
+description = "Auto-fix code issues"
+alias = "f"
+depends = [
+  "fix:oxlint",
+  "fix:oxfmt",
+  "fix:markdownlint",
+  "fix:typos",
+  "fix:trivy",
+]

@@ -1,0 +1,13 @@
+include = ["*.toml"]
+exclude = ["**/node_modules"]
+
+[formatting]
+align_entries = false
+array_trailing_comma = true
+array_auto_expand = true
+compact_arrays = true
+column_width = 100
+indent_string = '  '
+trailing_newline = true
+reorder_keys = false
+allowed_blank_lines = 1

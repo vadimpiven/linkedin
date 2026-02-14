@@ -1,0 +1,22 @@
+{
+  "config": {
+    "default": true,
+    "MD013": false,
+    "MD024": {
+      "siblings_only": true,
+    },
+    "MD029": {
+      "style": "ordered",
+    },
+    "MD033": {
+      "allowed_elements": ["br", "details", "summary"],
+    },
+    "MD041": false,
+    "MD048": {
+      "style": "backtick",
+    },
+  },
+  "globs": ["*.md", ".agent/**/*.md"],
+  "ignores": ["connections.md", "profile.md"],
+  "gitignore": ".gitignore",
+}

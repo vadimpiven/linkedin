@@ -3,21 +3,21 @@
 Sourced from [LinkedIn Connections][linkedin-url] using [scrape_connections.js][scraper-script]
 
 [linkedin-url]: https://www.linkedin.com/mynetwork/invite-connect/connections/
-[scraper-script]: ./scrape_connections.js
+[scraper-script]: ./scripts/scrape_connections.js
 
 | Connected on | Name | Profile Link | Category |
 | ---- | ---- | ---- | ---- |
-| February 14, 2026 | Luisa Parra Arroyo | <https://www.linkedin.com/in/luisa-parra-arroyo-25598a238/> | Acquisition Partner |
-| January 26, 2026 | Charlotte Bacon | <https://www.linkedin.com/in/charlotteemmabacon/> | Uncategorized |
-| January 25, 2026 | Anton Shakhov | <https://www.linkedin.com/in/hakkazuu/> | Uncategorized |
-| January 21, 2026 | D'Arcy Turner | <https://www.linkedin.com/in/darcyjet/> | Uncategorized |
-| January 21, 2026 | Sofía Moragues | <https://www.linkedin.com/in/sofiamoragues/> | Uncategorized |
-| January 16, 2026 | elizaveta sigareva | <https://www.linkedin.com/in/lizasigareva/> | Uncategorized |
-| December 24, 2025 | ELENA SIZOVA | <https://www.linkedin.com/in/elena-sizova-851354157/> | Uncategorized |
-| December 24, 2025 | Pierre Tachoire | <https://www.linkedin.com/in/pierre-tachoire/> | Uncategorized |
-| December 2, 2025 | Marat Biror | <https://www.linkedin.com/in/mbirarov/> | Uncategorized |
-| November 28, 2025 | 🌻 Sarra Manai | <https://www.linkedin.com/in/sarram26/> | Uncategorized |
-| October 31, 2025 | Pavel Murzich | <https://www.linkedin.com/in/pavel-murzich/> | Uncategorized |
+| February 14, 2026 | [Luisa Parra Arroyo](profiles/2026-02-14_luisa-parra-arroyo) | <https://www.linkedin.com/in/luisa-parra-arroyo-25598a238/> | Uncategorized |
+| January 26, 2026 | [Charlotte Bacon](profiles/2026-02-14_charlotte-bacon) | <https://www.linkedin.com/in/charlotteemmabacon/> | Uncategorized |
+| January 25, 2026 | [Anton Shakhov](profiles/2026-02-14_anton-shakhov) | <https://www.linkedin.com/in/hakkazuu/> | Uncategorized |
+| January 21, 2026 | [D'Arcy Turner](profiles/2026-02-14_d'arcy-turner) | <https://www.linkedin.com/in/darcyjet/> | Uncategorized |
+| January 21, 2026 | [Sofía Moragues](profiles/2026-02-14_sofía-moragues) | <https://www.linkedin.com/in/sofiamoragues/> | Uncategorized |
+| January 16, 2026 | [elizaveta sigareva](profiles/2026-02-14_elizaveta-sigareva) | <https://www.linkedin.com/in/lizasigareva/> | Uncategorized |
+| December 24, 2025 | [ELENA SIZOVA](profiles/2026-02-14_elena-sizova) | <https://www.linkedin.com/in/elena-sizova-851354157/> | Uncategorized |
+| December 24, 2025 | [Pierre Tachoire](profiles/2026-02-14_pierre-tachoire) | <https://www.linkedin.com/in/pierre-tachoire/> | Uncategorized |
+| December 2, 2025 | [Marat Biror](profiles/2026-02-14_marat-biror) | <https://www.linkedin.com/in/mbirarov/> | Uncategorized |
+| November 28, 2025 | [🌻 Sarra Manai](profiles/2026-02-14_🌻-sarra-manai) | <https://www.linkedin.com/in/sarram26/> | Uncategorized |
+| October 31, 2025 | [Pavel Murzich](profiles/2026-02-14_pavel-murzich) | <https://www.linkedin.com/in/pavel-murzich/> | Uncategorized |
 | October 29, 2025 | Emma Vincarosa, MBA | <https://www.linkedin.com/in/emmalv/> | Uncategorized |
 | October 25, 2025 | Lizaveta Batura | <https://www.linkedin.com/in/lizaveta-batura/> | Uncategorized |
 | October 23, 2025 | Josefine Lundstrøm | <https://www.linkedin.com/in/josefine-lundstr%C3%B8m/> | Uncategorized |
